@@ -18,8 +18,8 @@ const App = () => {
 
             
             <header>
-                <h1>Stack OverRunneth</h1>
-                <Link to='/'>Stack OverRunneth</Link>
+                <h1>stack runnethOver</h1>
+                <Link to='/'>stack runnethOver</Link>
                 <br />
                 <GreetingContainer />
             </header>
