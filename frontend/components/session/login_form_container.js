@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { login } from '../../actions/session_actions';
+import { login, clearErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 import React from 'react'
 
@@ -14,7 +14,8 @@ const mSTP = ({ errors }) => {
 
 const mDTP = (dispatch) => {
     return {
-        submitForm: (user) => dispatch(login(user))
+        submitForm: (user) => dispatch(login(user)),
+        clearErrors: () => dispatch(clearErrors())
     }
 }
 

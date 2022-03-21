@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    height: 60px;
+    padding: 0 10px;
+}
+
+.greeting-links, .greeting-message {
+    display: flex;
+}
+
+.greeting-message h2 {
+    margin-right: 10px;
+}
+
+.login-button {
+    margin-right: 10px;
+}
+
+.signup-button {
+
+}

@@ -19,6 +19,11 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
         this.props.submitForm(this.state)
+            // .then(() => this.props.history.push('/'));
+    }
+
+    componentWillUnmount() {
+        this.props.clearErrors()
     }
 
     renderErrors() {
@@ -34,9 +39,8 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        debugger
         return(
-            <div>
+            <div className='session-container'>
                 <form onSubmit={this.handleSubmit}>
                     Welcome to Stack OverRunneth
                     <br />
