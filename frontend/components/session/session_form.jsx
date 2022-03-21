@@ -3,10 +3,20 @@ import React from 'react';
 class SessionForm extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            username: '',
-            password: ''
-        };
+
+        if (this.props.formType === 'Sign Up') {
+            this.state = {
+                username: '',
+                email: '',
+                password: ''
+            }
+        } else {
+            this.state = {
+                username: '',
+                password: ''
+            };
+        }
+        
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -39,6 +49,19 @@ class SessionForm extends React.Component {
     }
 
     render() {
+
+        let email = null
+        let br = null
+        if (this.props.formType === 'Sign Up') {
+            email = <label>Email: 
+                        <input type="text"
+                            value={this.state.email}
+                            onChange={this.update('email')}
+                        />
+                    </label>
+            br = <br />
+        }
+
         return(
             <div className='session-container'>
                 <form onSubmit={this.handleSubmit}>
@@ -55,8 +78,10 @@ class SessionForm extends React.Component {
                              />
                         </label>
                         <br />
+                        {email}
+                        {br}
                         <label>Password:
-                            <input type="text"
+                            <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')} />
                         </label>
