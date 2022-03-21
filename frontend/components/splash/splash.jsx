@@ -3,7 +3,7 @@ import React from 'react';
 const Splash = () => {
     return (
         <div className='splash-container'>
-            Cool info coming soon...
+            Some cool shakespearean style code info coming soon...
         </div>
     )
 }
