@@ -16,11 +16,9 @@ import SignupFormContainer from '../components/session/signup_form_container';
 
 const App = () => {
     return (
-        <div>
-
-            
+        <div className='app-container'>
             <header className='header'>
-                <Link to='/'><h3>stack runnethOver</h3></Link>
+                <Link className="home-link" to='/'><img className='header-logo' src={window.logo}></img><p>stack </p><strong>runnethOver</strong></Link>
                 <br />
                 <GreetingContainer />
             </header>

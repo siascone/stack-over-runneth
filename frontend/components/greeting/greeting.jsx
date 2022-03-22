@@ -5,9 +5,9 @@ const Greeting = ({currentUser, logout}) => {
     const sessionLinks = () => {
         return (
             <div className='greeting-links'>
-                <Link className='login-button' to='/login'>Login</Link>
+                <Link className='login-button' to='/login'>Log in</Link>
                 <br />
-                <Link className='signup-button' to='/signup'>Signup</Link>
+                <Link className='signup-button' to='/signup'>Sign up</Link>
             </div>
         )
     }
