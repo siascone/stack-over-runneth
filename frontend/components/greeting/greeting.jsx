@@ -13,9 +13,16 @@ const Greeting = ({currentUser, logout}) => {
     }
 
     const personalGreeting = () => {
+        let name
+        if (currentUser.username) {
+            name = currentUser.username
+        } else {
+            name = currentUser.email
+        }
+
         return (
             <div className='greeting-message'>
-                <h2>Hello, {currentUser.username}</h2>
+                <h2>Hello, {name}</h2>
                 <button className='greeting-logout' onClick={logout}>Log Out</button>
             </div>
         )

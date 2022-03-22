@@ -85,6 +85,10 @@
     font-family: inherit;
 }
 
+// input:focus {
+//     border: 1px solid hsl(205,47%,42%) !important;
+// }
+
 .session-submit-button, .demo-user {
     padding: 0.8em;
     color: hsl(0,0%,100%);
@@ -111,3 +115,31 @@
 .session-submit-button:hover, .demo-user:hover {
         background-color: hsl(209,100%,37.5%)
 }
+
+.error-message {
+    // font-family: Lucida Grande,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    color: hsl(358,68%,59%);
+    position: relative;
+    // top: -40px;
+    padding: 2px;
+    // order: 2;
+    // position: absolute;
+}
+
+.required {
+  border: 1px solid hsl(358,68%,59%) !important;
+//   position: relative;
+}
+
+input.session-input:focus {
+    outline: none;
+    border: 1px solid hsl(205,47%,42%);
+    box-shadow: 0 1px 5px hsl(205,47%,42%)
+
+
+    // box-shadow:rgba(0, 0, 0, 0.5);
+}
+// input:focus {
+//     border: 1px solid green !important;
+// }
