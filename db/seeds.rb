@@ -12,3 +12,4 @@ User.destroy_all
 spencer = User.create!(username: 'spennyandthejets', email: 'spencer@email.com', password: 'password')
 alice = User.create!(username: 'alpal', email: 'alice@email.com', password: 'password')
 nemo = User.create!(username: 'captainNemo', email: 'nemo@email.com', password: 'password')
+bill = User.create!(username: 'billyShakes', email: 'william@shakespeare.com', password: 'theTempest')

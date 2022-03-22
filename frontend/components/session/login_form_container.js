@@ -7,7 +7,7 @@ import React from 'react'
 const mSTP = ({ errors }) => {
     return {
         errors: errors.sessionErrors,
-        formType: 'Login',
+        formType: 'Log in',
         navLink: <Link to='/signup'>sign up instead</Link>
     };
 };
@@ -15,7 +15,9 @@ const mSTP = ({ errors }) => {
 const mDTP = (dispatch) => {
     return {
         submitForm: (user) => dispatch(login(user)),
-        clearErrors: () => dispatch(clearErrors())
+        clearErrors: () => dispatch(clearErrors()),
+        demoUser: () => dispatch(login({ email: 'william@shakespeare.com', password: 'theTempest' }))
+
     }
 }
 

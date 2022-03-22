@@ -1,10 +1,11 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 class SessionForm extends React.Component {
     constructor(props) {
         super(props)
 
-        if (this.props.formType === 'Sign Up') {
+        if (this.props.formType === 'Sign up') {
             this.state = {
                 email: '',
                 password: ''
@@ -18,6 +19,7 @@ class SessionForm extends React.Component {
         }
         
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
     }
 
     update(field) {
@@ -36,6 +38,11 @@ class SessionForm extends React.Component {
         this.props.clearErrors()
     }
 
+    demoLogin(e) {
+        e.preventDefault();
+        this.props.demoUser();
+    }
+
     renderErrors() {
         return (
             <ul>
@@ -51,42 +58,58 @@ class SessionForm extends React.Component {
     render() {
 
         let username = null
-        let br = null
-        if (this.props.formType === 'Sign Up') {
-            username = <label>Display name: 
-                        <input type="text"
-                            value={this.state.username}
-                            onChange={this.update('username')}
-                        />
-                    </label>
-            br = <br />
+        let options_link = <p>Don't have an account? <Link to='/signup' className='session-options-link'>Sign up</Link></p>
+        if (this.props.formType === 'Sign up') {
+            username = <div className='session-input-container'>
+                            <label className='session-label' htmlFor='username'>Display name</label>
+                            <input className='session-input' 
+                                id='username'
+                                type="text"
+                                value={this.state.username}
+                                onChange={this.update('username')}
+                            />
+                       </div>
+            options_link = <p>Already have an account? <Link to='/login' className='session-options-link'>Log in</Link></p>
+
         }
 
         return(
-            <div className='session-container'>
-                {/* <img className='form-logo' src={window.logo}></img> */}
-                <form className='session-form' onSubmit={this.handleSubmit}>
-                    {this.renderErrors()}
-                    <br />
-                    <div>
-                        {username}
-                        {br}
-                        <label>email: 
-                            <input type="text"
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                             />
-                        </label>
-                        <br />                        
-                        <label>Password:
-                            <input type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')} />
-                        </label>
-                        <br />
-                        <input type="submit" value={this.props.formType} />
-                    </div>
-                </form>
+            <div className='session'>
+                <img className='session-form-logo' src={window.logo}></img>
+                <div className='session-container'>
+                    {/* <img className='form-logo' src={window.logo}></img> */}
+                    <form className='session-form' onSubmit={this.handleSubmit}>
+                        {this.renderErrors()}
+                        <div>
+                            {username}
+                            <div className='session-input-container'>
+                                <label className='session-label' htmlFor='email'>Email</label>
+                                <input className='session-input'
+                                    id='email'
+                                    type="text"
+                                    value={this.state.email}
+                                    onChange={this.update('email')}
+                                />
+                            </div>
+
+                            <div className='session-input-container'>
+                                <label className='session-label' htmlFor='password'>Password</label>
+                                <input className='session-input'
+                                    id="password"
+                                    type="password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')} 
+                                />
+                            </div>
+
+                            <input className='session-submit-button' type="submit" value={this.props.formType} />
+                            <button className='demo-user' onClick={this.demoLogin}>Demo Account</button>
+                        </div>
+                    </form>
+                </div>
+                <div className='session-options'>
+                    {options_link}
+                </div>
             </div>
         )
     }
