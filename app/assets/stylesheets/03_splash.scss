@@ -66,6 +66,17 @@
         flex-direction: column !important;
         align-items: center !important;
     }
+
+
+
+    .splash-build-community-cta p, .splash-create-account-link {
+        margin: 0 !important;
+        margin-top: 24px !important;
+    }
+
+    .splash-build-community-cta p {
+        text-align: center;
+    }
 }
 
 .splash-spy-glass, .splash-lock {
@@ -283,9 +294,11 @@
     width: 100%;
     margin: 0 24px;
     margin-bottom: 35px;
+    color: hsl(210,8%,25%);
 }
 
 .splash-build-community-cta p {
+    font-size: 18px;
     margin: 0 24px;
 }
 

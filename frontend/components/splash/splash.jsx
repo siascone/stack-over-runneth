@@ -100,7 +100,7 @@ const Splash = () => {
             </div>
 
             <div className='splash-build-community-cta'>
-                <Link className="home-link s-detail-link" to='/'><img className='header-logo s-detail' src={window.logo}></img></Link>
+                <Link className="home-link s-detail-link community-logo" to='/'><img className='header-logo s-detail' src={window.logo}></img></Link>
                 <p>
                     Build awesome community, share technial knowledge, make the world a better place!
                 </p>
