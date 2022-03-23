@@ -49,17 +49,20 @@ table {
 
 html {
 	height: 100%;
+	width: 100%;
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Liberation Sans",sans-serif;
 
 }
 
 body {
 	height: 100%;
+	width: 100%;
     background-color: hsl(210,8%,97.5%);
 }
 
 #root {
 	height: 100%;
+	width: 100%;
 	// min-height: 100%;
 	// height: inherit;
 }
