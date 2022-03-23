@@ -40,42 +40,71 @@ const Splash = () => {
                     </p>
                 </div>
 
+                <span className='splash-break'></span>
+
                 <div className='splash-details'>
                     <div className='splash-detail'>
-                        <h2>Detail 1</h2>
-                        <p>note on detail 1</p>
+                        <h3>A fair few</h3>
+                        <p>monthly visitors to stack runnethOver</p>
                     </div>
                     <div className='splash-detail'>
-                        <h2>Detail 2</h2>
-                        <p>note on detail 2</p>
+                        <h3>45 or so</h3>
+                        <p>times a developer got help since 2022</p>
                     </div>
                     <div className='splash-detail'>
-                        <h2>Detail 3</h2>
-                        <p>note on detail 3</p>
+                        <h3>100% ROI</h3>
+                        <p>for developers who provided help on stack runnethOver</p>
                     </div>
                     <div className='splash-detail'>
-                        <h2>Detail 4</h2>
-                        <p>note on detail 4</p>
+                        <h3>A good number</h3>
+                        <p>of stack runnethOver users active daily</p>
                     </div>
                 </div>
 
-                <div className='spalsh-about'>
-                    <div className='splash-about-details'>
-                        cool details about stack runnethOver
+                <div className='splash-about'>
+                    <div className='splash-about-details d1'>
+                        <div className='splash-detail-logo'>
+                            <Link className="home-link s-detail-link" to='/'><img className='header-logo s-detail' src={window.logo}></img><p>stack </p><strong>runnethOver</strong></Link>
+                        </div>
+                        <div className='splash-about-image'>
+                            <img width={520} height={346} src="https://cdn.sstatic.net/Img/home/illo-public.svg?v=14bd5a506009" alt="" />
+                        </div>
+                        <div className='splash-about-detail-wordage'>
+                            <h2>A public platform building the definitive collection of coding questions & answers</h2>
+                            <p>A community-based space to find and contribute answers to technical challenges, and one of the most popular websites in the world.</p>
+                        </div>
+                        <div className='splash-about-cta'>
+                            <Link className='splash-join-link' to='/signup'>Join the community</Link>
+                        </div>
+
                     </div>
 
-                    <div className='splash-about-details'>
-                        cool details about community engagement
+                    <div className='splash-about-details d2'>
+                        <div className='splash-detail-logo'>
+                            <Link className="home-link s-detail-link" to='/'><img className='header-logo s-detail' src={window.logo}></img><strong>FOR EVERYONE</strong></Link>
+                        </div>
+                        <div className='splash-about-image'>
+                            <img width={520} height={346} src="https://cdn.sstatic.net/Img/home/illo-teams.svg?v=7e543f14fcc0" alt="" />
+                        </div>
+                        <div className='splash-about-detail-wordage'>
+                            <h2>A great collaboration & knowledge sharing platform for everyone</h2>
+                            <p>A web-based platform to increase productivity, decrease debugging times, accelerate learning, and broadcast technical knowledge.</p>
+                        </div>
+                        <div className='splash-about-cta'>
+                            <Link className='splash-login-link' to='/signup'>Sign up today</Link>
+                        </div>
                     </div>
                 </div>
 
-                <div className='splash-build-community-cta'>
-                    <p>
-                        Find community, share knowledge, build a better world!
-                    </p>
-                    <Link to='/signup'>Create a free account</Link>
-                </div>
 
+            </div>
+
+            <div className='splash-build-community-cta'>
+                <Link className="home-link s-detail-link" to='/'><img className='header-logo s-detail' src={window.logo}></img></Link>
+                <p>
+                    Build awesome community, share technial knowledge, make the world a better place!
+                </p>
+                <Link className='splash-create-account-link' to='/signup'>Create a free account</Link>
             </div>
         </div>
     )
