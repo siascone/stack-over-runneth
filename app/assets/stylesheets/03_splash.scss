@@ -28,8 +28,6 @@
 
 @media (max-width: 1305px) {
 
-    
-
     .splash-ctas {
         flex-direction: column;
     }
@@ -72,6 +70,10 @@
     .splash-build-community-cta p, .splash-create-account-link {
         margin: 0 !important;
         margin-top: 24px !important;
+    }
+
+    .community-logo {
+        margin-top: -11px;
     }
 
     .splash-build-community-cta p {
