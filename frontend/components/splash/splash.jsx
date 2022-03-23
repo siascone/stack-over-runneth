@@ -15,7 +15,7 @@ const Splash = () => {
                             Find the best answer to your technical question,
                             help others answer theirs
                         </p>
-                        <Link className='splash-join-link' to='/signup'>Join the community</Link>
+                        <Link className='splash-join-link' to='/signup' onClick={() => window.scrollTo(0, 0)}>Join the community</Link>
                     </div>
 
                     <div className='splash-login-cta'>
@@ -27,7 +27,7 @@ const Splash = () => {
                             Already gotten help on stack runnethOver, 
                             keep sharing that knowledge
                         </p>
-                        <Link className='splash-login-link' to='/login'>Log in today</Link>
+                        <Link className='splash-login-link' to='/login' onClick={() => window.scrollTo(0, 0)}>Log in today</Link>
                     </div>
                 </div>
                 
@@ -74,7 +74,7 @@ const Splash = () => {
                             <p>A community-based space to find and contribute answers to technical challenges, and one of the most popular websites in the world.</p>
                         </div>
                         <div className='splash-about-cta'>
-                            <Link className='splash-join-link' to='/signup'>Join the community</Link>
+                            <Link className='splash-join-link' to='/signup' onClick={() => window.scrollTo(0, 0)}>Join the community</Link>
                         </div>
 
                     </div>
@@ -91,7 +91,7 @@ const Splash = () => {
                             <p>A web-based platform to increase productivity, decrease debugging times, accelerate learning, and broadcast technical knowledge.</p>
                         </div>
                         <div className='splash-about-cta'>
-                            <Link className='splash-login-link' to='/signup'>Sign up today</Link>
+                            <Link className='splash-login-link' to='/signup' onClick={() => window.scrollTo(0, 0)}>Sign up today</Link>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@ const Splash = () => {
                 <p>
                     Build awesome community, share technial knowledge, make the world a better place!
                 </p>
-                <Link className='splash-create-account-link' to='/signup'>Create a free account</Link>
+                <Link className='splash-create-account-link' to='/signup' onClick={() => window.scrollTo(0, 0)}>Create a free account</Link>
             </div>
         </div>
     )

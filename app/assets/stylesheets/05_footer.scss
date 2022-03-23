@@ -1,0 +1,34 @@
+.footer {
+    display: flex;
+    // justify-content: space-between;
+    width: 100%;
+    height: 325px;
+    color: hsl(210,8%,45%);
+    background-color: hsl(210,8%,15%);
+}
+
+.footer-logo {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    margin-right: 35px;
+}
+
+.stack-runnethover-links, .bio-links, .footer-connect {
+    margin-top: 24px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    color: hsl(210,8%,55%);
+}
+
+.stack-runnethover-links h4, .bio-links h4, .footer-connect h4 {
+    color: hsl(210,8%,75%);
+    margin-bottom: 12px;
+}
+
+.splash-footer-link {
+    color: hsl(210,8%,55%);
+    margin-bottom: 12px !important;
+    text-decoration: none;
+}

@@ -13,8 +13,10 @@ import GreetingContainer from './greeting/greeting_container';
 import Splash from './splash/splash';
 import LoginFormContainer from '../components/session/login_form_container';
 import SignupFormContainer from '../components/session/signup_form_container';
+import Footer from './footer/footer';
 
 const App = () => {
+
     return (
         <div className='app-container'>
             <header className='header'>
@@ -29,6 +31,8 @@ const App = () => {
                 <Route exact path='/' component={Splash}/>
                 <Redirect to='/' />
             </Switch>
+
+            <Footer />
         </div>
     )
 }
