@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  email           :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  username        :string
+#
 class User < ApplicationRecord
 
     validates :email, presence: true, uniqueness: true
@@ -37,5 +49,8 @@ class User < ApplicationRecord
         end
     end
 
+    has_many :questions,
+        foreign_key: :author_id,
+        class_name: :Question
 
 end
