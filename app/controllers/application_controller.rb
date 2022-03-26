@@ -1,9 +1,13 @@
 class ApplicationController < ActionController::Base
-    helper_method :current_user, :logged_in?
-    
-    private 
+    # include ActionView::Rendering
+    skip_before_action :verify_authenticity_token
+
+    helper_method :current_user, :logged_in? 
+
+    private
 
     def current_user
+        # debucgger
         return nil unless session[:session_token]
         @current_user ||= User.find_by(session_token: session[:session_token])
     end
