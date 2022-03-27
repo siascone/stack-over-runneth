@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import { createQuestion, deleteQuestion, fetchAllQuetions, fetchQuestion, updateQuestion } from './util/questions_api_util';
+import { createAnswer, deleteAnswer, fetchAllAnswers, fetchAnswer, updateAnswer } from './util/answers_api_util';
+import { fetchAllQuestions } from './util/questions_api_util'
 
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
@@ -18,11 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         store = configureStore();
     }
+
     window.getState = store.getState
-    window.createQuestion = createQuestion
-    window.fetchAllQuestions = fetchAllQuetions
-    window.fetchQuestion = fetchQuestion
-    window.updateQuestion = updateQuestion
-    window.deleteQuestion = deleteQuestion
+    
+    window.fetchAllQuestions = fetchAllQuestions
+
+    window.fetchAllAnswers = fetchAllAnswers
+    window.fetchAnswer = fetchAnswer
+    window.createAnswer = createAnswer
+    window.updateAnswer = updateAnswer
+    window.deleteAnswer = deleteAnswer
+
     ReactDOM.render(<Root store={store} />, root)
 });
