@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import { createAnswer, deleteAnswer, fetchAllAnswers, fetchAnswer, updateAnswer } from './util/answers_api_util';
-import { fetchAllQuestions } from './util/questions_api_util'
+import { fetchAllQuestions, createQuestion, deleteQuestion, fetchQuestion, updateQuestion } from './util/questions_api_util'
+import * as questionActions from './actions/question_actions';
+import * as answerActions from './actions/answer_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
@@ -20,9 +22,17 @@ document.addEventListener('DOMContentLoaded', () => {
         store = configureStore();
     }
 
-    window.getState = store.getState
+    window.store = store;
+    window.dispatch = store.dispatch
     
+    window.questionActions = questionActions
+    window.answerActions = answerActions
+
     window.fetchAllQuestions = fetchAllQuestions
+    window.fetchQuestion = fetchQuestion
+    window.createQuestion = createQuestion
+    window.updateQuestion = updateQuestion
+    window.deleteQuestion = deleteQuestion
 
     window.fetchAllAnswers = fetchAllAnswers
     window.fetchAnswer = fetchAnswer
