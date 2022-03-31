@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 class QuestionIndexItem extends React.Component {
     constructor(props) {
@@ -7,14 +8,25 @@ class QuestionIndexItem extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchQuestion(this.props.question.id)
+        if (this.props.question) {
+            this.props.fetchQuestion(this.props.question.id)
+        } else {
+            this.props.fetchQuestion(this.props.match.params.questionId)
+        }
     }
 
     render() {
+
+        if (!this.props.question) {
+            return null
+        }
+
         return (
             <div className='question-container'>
-                <p>{this.props.question.subject}</p>
-                <br />
+                <Link to={`questions/${this.props.question.id}`}
+                    className="question-link"
+                >{this.props.question.subject}</Link>
+                
                 <p>{this.props.question.body}</p>
                 <br />
             </div>
